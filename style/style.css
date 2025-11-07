@@ -1,0 +1,13 @@
+body {
+    background-color: #086375;
+}
+.navig {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
