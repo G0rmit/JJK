@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toji Fushiguro</title>
-    <link rel="stylesheet" href="../style/styleToji.css">
+    <link rel="stylesheet" href="../style/styleToji.css"> <!--link css-->
+	<!--get all needed fonts-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Jolly+Lodger&display=swap" rel="stylesheet">
-	<script src="../script/scriptToji.js" defer></script>
+	<script src="../script/scriptToji.js" defer></script> <!--link js-->
     </head>
 
     <body>
-	<header>
+	<header><!--add logo and nav links in header-->
 		<img class="logo" src="../assets/Logo.png" alt="logo">
 		<nav>
 			<a href="../JJKProject.html">Home</a>
@@ -25,14 +26,14 @@
 	</header>
 	<main>
 	<h2 id="hint">Try finding information by clicking on specific point on this body:</h2>
-	<h1>Full description of Toji Fushiguro</h1>
-	<section id="stage">
+	<h1>Full description of Toji Fushiguro</h1> <!--hint for users to understand how body points work-->
+	<section id="stage"> <!--set image, points, lines and info windows in one container to manage their position on page-->
 		<img class="mainToji" src="../assets/tojiFull1.png" alt="A picture of Toji in full height">
-		<div id="info" class="info">
-			<canvas id="firstCanvas"></canvas>
-			<div id="contentOne">
+		<div id="info" class="info"><!--set info windows and lines in one container for js to make them appear and disapper together. I used div because it doens't matter which container I use-->
+			<canvas id="firstCanvas"></canvas> <!--line from point to info window-->
+			<div id="contentOne"> <!--set container as info window to unite video and text-->
 				<p>The Inverted Spear of Heaven: special grade cursed tool with the ability to completely nullify cursed techniques on contact.</p>
-				<video id="videoWeapon" autoplay muted loop>
+				<video id="videoWeapon" autoplay muted loop> <!--add video that will autoplay and loop-->
 					<source src="../assets/tojiWeapon.mp4" type="video/mp4">
 					Your browser does not support the video tag(
 				</video>
@@ -66,12 +67,12 @@
 				While in most cases it apmlifies cursed energy and weakens body, this time it was reversed.</p>
 			</div>
 		</div>
-		<div id="point" class="pointClass"></div>
+		<div id="point" class="pointClass"></div> <!--create round points, I used div because it's easier than taking elements from internet, and any container is as good as div for making a point-->
 		<div id="point2" class="pointClass"></div>
 		<div id="point3" class="pointClass"></div>
 		<div id="point4" class="pointClass"></div>
 	</section>
-		<article>
+		<article> <!--section with additional information-->
 			<section id="pers">
 				<h2>Personality</h2>
 				<p>Toji Fushiguro is cool-headed, confident, and enjoys insightful conversations. 
@@ -93,14 +94,14 @@
 			</section>
 			<section>
 				<h2>Toji vs Geto</h2>
-				<video id="videoFight" controls loop>
+				<video id="videoFight" controls loop> <!--added video with controls for user to be able to watch full screen-->
 					<source src="../assets/TojiGeto.mp4" type="video/mp4">
 					Your browser does not support the video tag(
 				</video>
 			</section>
 		</article>
 	</main>
-	<footer>
+	<footer> <!--footer with logo, sources and credits-->
 		<ul >
 			<li class="source">Page made by Pavlo Kvartiuk</li>
 			<li class="source">

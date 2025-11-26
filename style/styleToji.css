@@ -1,22 +1,22 @@
 body {
-    background-color: #086375;
+    background-color: #086375; /*set background color for page*/
 }
-header { 
+header { /*set header to start from the beginning of page and center the items*/
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
 }
-.logo {
+.logo { /*set size of logos*/
 	width: 11vh;
 	height: 11vh;
 }
-nav { 
+nav { /*set navigation bar to take all space that's left, set equal amount of space between <a> and set font size for them*/
 	display: flex;
 	flex: 1;
 	justify-content: space-evenly;
 	font-size: 150%;
 }
-nav a { 
+nav a { /*set color, background color, font, border, padding and transition for hover*/
 	margin: 0.2em;
 	color: #086375;
 	background: white;
@@ -31,24 +31,24 @@ nav a {
 	padding: 0vh 13vh;
 	transition: all 0.4s ease;
 }
-nav a:hover { 
+nav a:hover { /*set on hover to get bigger, change color and background color*/
 	background-color: purple;
 	border-color: purple;
 	color: white;
 	transform: scale(1.15);
 }
-#stage {
+#stage { /*set the container for the whole image and it's elements relative, center it and set size*/
 	position: relative;
 	margin: auto;
 	width: 30%;
 }
-.mainToji {
+.mainToji { /*set image in center and it's size*/
 	display: block;
 	margin: auto;
 	width: 100%;
 	height: auto;
 }
-h1 {
+h1 { /*set color and font for page main title */
 	font-family: "Jolly Lodger", system-ui; 
   	font-weight: 400; 
   	font-style: normal;
@@ -56,7 +56,8 @@ h1 {
 	font-size: 10vh;
 	color: #cae9ff;
 }
-#firstCanvas {
+/*set canvas lines and info windows in their defined positions, and set their sizes*/
+#firstCanvas 
 	width: 54%;
 	height: 23%;
 	position: absolute;
@@ -116,10 +117,10 @@ h1 {
 	top: 75%;
 	right: -105%;
 }
-.info {
+.info { /*make info windows invisible at first, for user to reveal them*/
 	visibility: hidden;
 }
-.pointClass {
+.pointClass { /*set size, color, transition on hover, and cursor type for points on the body*/
 	background-color: #7fcaff;
 	position: absolute;
 	width: 0.7vw;
@@ -128,9 +129,10 @@ h1 {
 	transition: all 0.3s ease;
 	cursor: pointer;
 }
-.pointClass:hover {
+.pointClass:hover { /*make body points increase in size on hover*/
 	transform: scale(2);
 }
+/*set location for body points*/
 #point {
 	top: 30%;
 	left: 5%;
@@ -147,23 +149,23 @@ h1 {
 	top: 40%;
 	right: 48%;
 }
-#videoInventory {
+#videoInventory { /*set size and additional positionning for video*/
 	margin-left: 1.8vw;
 	width: 25vw;
 	height: auto;
 }
-p {
+p { /*set font, size, and color for text in info windows*/
 	font-family: "Jolly Lodger", system-ui; 
   	font-weight: 400; 
   	font-style: normal;
 	color: #cae9ff;
 	font-size: 4vh;
 }
-#videoWeapon {
+#videoWeapon { /*set size of second video*/
 	width: 25vw;
 	height: auto;
 }
-#hint {
+#hint { /*set font, color, size and position of the hint message*/
 	font-family: "Jolly Lodger", system-ui; 
   	font-weight: 400; 
   	font-style: normal;
@@ -173,7 +175,7 @@ p {
 	visibility: visible;
 	font-size: 4vh;
 }
-article {
+article { /*set size and border for container with additional information under the image*/
 	margin-top: 20vh;
 	display: flex;
 	justify-content: space-around;
@@ -181,15 +183,12 @@ article {
 	border-top: none;
 	height: 49vh;
 }
-article section:last-child {
-	border-right: none;
-}
-article section {
+article section { /*set border and background color for sections in article. Also make them take all available space*/
 	flex: 1;
 	background-color: #086375;
 	border-right: 2vw solid white;
 }
-section h2 {
+section h2 { /*set font, size, and implement title for each section as a part of border*/
 	font-family: "Jolly Lodger", system-ui; 
   	font-weight: 400; 
   	font-style: normal;
@@ -200,32 +199,32 @@ section h2 {
 	font-size: 7vh;
 	margin-bottom: 0px;
 }
-#pers {
+#pers { /*make first section to take all space and put text under title */
 	flex: 1;
 	flex-direction: column;
 	display: flex;
 	height: 100%;
 }
-section p {
+section p { /*set size, padding and make text take all available space*/
 	font-size: 150%;
 	text-align: justify;
 	padding: 0 0.5vw;
 	flex: 1;
 	font-size: 3.5vh;
 }
-#list {
+#list { /*set second section to have title and list under it*/
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 }
-#videoFight {
+#videoFight { /*prepare third section to fit video*/
 	display: block;
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
 	flex: 1;
 }
-li {
+li { /*set font, color and size for elements of list*/
 	color: #cae9ff;
 	font-family: "Jolly Lodger", system-ui; 
   	font-weight: 400; 
@@ -233,7 +232,7 @@ li {
 	flex: 1;
 	font-size: 3.5vh;
 }
-ul {
+ul { /*make list to stay under the title, set it to take all available space*/
 	flex: 1;
 	list-style-type: none;
 	display: flex;
@@ -241,34 +240,124 @@ ul {
 	height: 100%;
 	width: 100%;
 }
-article section:nth-of-type(3){
+article section:nth-of-type(3){ /*fit the whole section under video*/
 	display: flex;
 	flex-direction: column;
 	position: relative;
 	overflow: hidden;
 	border-right: none;
 }
-article section:nth-of-type(3) h2 {
+article section:nth-of-type(3) h2 { /*set the title above video so it wouldn't be behind it*/
     flex: 0 0 auto;
     margin: 0;
 }
-section li::before {
+section li::before { /*add custom bullets for list*/
 	content: "🗡️";
 	margin-right: 2vw;
 }
-footer {
+footer { /*display logo and credits on the same line in footer, get some space between article and footer*/
 	margin-top: 5vh;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-footer a {
+footer a { /*set font and color for sources*/
 	font-family: "Jolly Lodger", system-ui; 
   	font-weight: 400; 
   	font-style: normal;
 	text-decoration: none;
 	color: white;
 }
-footer a:hover {
+footer a:hover { /*make sources change color on hover*/
 	color: purple;
+}
+@media only screen and (max-width: 768px) {
+    
+
+    canvas { /*remove lines*/
+        display: none;
+    }
+
+    .logo { /*set logo smaller*/
+        width: 60px;
+        height: 60px;
+    }
+    nav { /*set smaller gap in navigation bar*/
+        gap: 5px;
+        justify-content: center;
+    }
+    nav a { /*make nav links smaller*/
+        padding: 5px 10px;
+        font-size: 1rem;
+        margin: 2px;
+        border-width: 3px;
+    }
+    header { /*set smaller padding to fit*/
+        padding: 5px;
+    }
+
+    article { /*change display to column, make it grow in dependance of amount of space*/
+        flex-direction: column;
+        height: auto;
+        margin-top: 5vh;
+        border-right: 2vw solid white;
+    }
+    article section { /*make smaller padding*/
+        border-right: none;
+        border-bottom: 2vw solid white;
+        padding-bottom: 20px;
+    }
+    article section:last-child {
+        border-bottom: none;
+    }
+
+    #stage { /*put info windows in coulmn and resize so they would take all available space*/
+ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .mainToji { /*set size of image according to display, smaller margin*/
+        width: 70%; 
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .info { /*make info windows visible, count size with box, make adjustments for smaller display*/
+        visibility: visible; 
+        position: static;
+        width: 100%;
+        height: auto; 
+        margin-bottom: 15px;
+        border: 2px solid white;
+        background-color: #086375;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    #videoWeapon, #videoInventory { /*size them to be able ho grow if needed*/
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    #contentOne, #contentTwo, #contentThree, #contentFour { /*set static position because they no longer need custom one,make them grow if needed*/
+        position: static;
+        width: 100%;
+        height: auto;
+        background: none;
+    }
+
+    .pointClass, #hint { /*hide body points, no need for them*/
+        display: none;
+    }
+
+    h1 { /*set smaller font size for title*/
+		font-size: 3rem; 
+	}
+    p, li { /*set smaller font size for most texts*/
+		font-size: 1.2rem;
+	}
 }

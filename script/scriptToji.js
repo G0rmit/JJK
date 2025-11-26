@@ -1,3 +1,4 @@
+/*create lines from body points to info windows*/
 const canvas = document.getElementById("firstCanvas");
 const ctx = canvas.getContext("2d");
 ctx.strokeStyle = "#cae9ff";
@@ -34,6 +35,7 @@ ctx4.moveTo(0, 0);
 ctx4.lineTo(50, 150);
 ctx4.lineTo(110, 150);
 ctx4.stroke();
+/*make info windows appear only when clicked on points*/
 let hint = document.querySelector("#hint");
 const point = document.querySelector("#point");
 let info = document.querySelector("#info");
@@ -43,19 +45,20 @@ const point3 = document.querySelector("#point3");
 let info3 = document.querySelector("#info3");
 const point4 = document.querySelector("#point4");
 let info4 = document.querySelector("#info4");
+/*add events for each point*/
 point.addEventListener('click', () => turnVisible(info));
 point2.addEventListener('click', () => turnVisible(info2));
 point3.addEventListener('click', () => turnVisible(info3));
 point4.addEventListener('click', () => turnVisible(info4));
 function turnVisible(infoVariable)
 {
-	hint.style.visibility = "hidden";
-	const loadCss = getComputedStyle(infoVariable).visibility;
+	hint.style.visibility = "hidden"; /*hide hint about clicking on points, we won't need it one the user figured out how they work*/
+	const loadCss = getComputedStyle(infoVariable).visibility; /*load css visibility so it was already loaded and click worked from the first try*/
 	if (loadCss === "hidden")
 	{
 		infoVariable.style.visibility = "visible";
 	}
-	else
+	else /*to be able to hide points on second click for interactivity*/
 	{
 		infoVariable.style.visibility = "hidden";
 	}
