@@ -57,14 +57,14 @@ h1 { /*set color and font for page main title */
 	color: #cae9ff;
 }
 /*set canvas lines and info windows in their defined positions, and set their sizes*/
-#firstCanvas 
+#firstCanvas {
 	width: 54%;
 	height: 23%;
 	position: absolute;
 	top: 12%;
 	left: -38%;
 }
-#contentOne {
+#contentOne { 
 	background-color: #086375;
 	position: absolute;
 	top: -8%;
@@ -123,8 +123,8 @@ h1 { /*set color and font for page main title */
 .pointClass { /*set size, color, transition on hover, and cursor type for points on the body*/
 	background-color: #7fcaff;
 	position: absolute;
-	width: 0.7vw;
-	height: 1.6vh;
+	width: 10px;
+	height: 10px;
 	border-radius: 50%;
 	transition: all 0.3s ease;
 	cursor: pointer;
@@ -247,71 +247,81 @@ article section:nth-of-type(3){ /*fit the whole section under video*/
 	overflow: hidden;
 	border-right: none;
 }
-article section:nth-of-type(3) h2 { /*set the title above video so it wouldn't be behind it*/
+/*set the title above video so it wouldn't be behind it*/
+article section:nth-of-type(3) h2 {
     flex: 0 0 auto;
     margin: 0;
 }
-section li::before { /*add custom bullets for list*/
+/*add custom bullets for list*/
+section li::before {
 	content: "🗡️";
 	margin-right: 2vw;
 }
-footer { /*display logo and credits on the same line in footer, get some space between article and footer*/
+/*display logo and credits on the same line in footer, get some space between article and footer*/
+footer {
 	margin-top: 5vh;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-footer a { /*set font and color for sources*/
+/*set font and color for sources*/
+footer a {
 	font-family: "Jolly Lodger", system-ui; 
   	font-weight: 400; 
   	font-style: normal;
 	text-decoration: none;
 	color: white;
 }
-footer a:hover { /*make sources change color on hover*/
+/*make sources change color on hover*/
+footer a:hover {
 	color: purple;
 }
 @media only screen and (max-width: 768px) {
     
-
-    canvas { /*remove lines*/
-        display: none;
+/*remove lines*/
+    canvas {
+        display: none ;
     }
-
-    .logo { /*set logo smaller*/
+/*set logo smaller*/
+    .logo {
         width: 60px;
         height: 60px;
     }
-    nav { /*set smaller gap in navigation bar*/
+	/*set smaller gap in navigation bar*/
+    nav {
         gap: 5px;
         justify-content: center;
     }
-    nav a { /*make nav links smaller*/
+	/*make nav links smaller*/
+    nav a {
         padding: 5px 10px;
         font-size: 1rem;
         margin: 2px;
         border-width: 3px;
     }
-    header { /*set smaller padding to fit*/
+	/*set smaller padding to fit*/
+    header {
         padding: 5px;
     }
-
-    article { /*change display to column, make it grow in dependance of amount of space*/
+/*change display to column, make it grow in dependance of amount of space*/
+    article {
         flex-direction: column;
         height: auto;
         margin-top: 5vh;
         border-right: 2vw solid white;
     }
-    article section { /*make smaller padding*/
+	/*make smaller padding*/
+    article section {
         border-right: none;
         border-bottom: 2vw solid white;
         padding-bottom: 20px;
     }
+	
     article section:last-child {
         border-bottom: none;
     }
-
-    #stage { /*put info windows in coulmn and resize so they would take all available space*/
+/*put info windows in coulmn and resize so they would take all available space*/
+    #stage {
  
         display: flex;
         flex-direction: column;
@@ -319,45 +329,47 @@ footer a:hover { /*make sources change color on hover*/
         width: 100%;
         height: auto;
     }
-
-    .mainToji { /*set size of image according to display, smaller margin*/
+/*set size of image according to display, smaller margin*/
+    .mainToji {
         width: 70%; 
         height: auto;
         margin-bottom: 20px;
+        order: -1; 
     }
-
-    .info { /*make info windows visible, count size with box, make adjustments for smaller display*/
+/*make info windows visible, count size with box, make adjustments for smaller display*/
+    .info {
         visibility: visible; 
         position: static;
         width: 100%;
         height: auto; 
         margin-bottom: 15px;
         border: 2px solid white;
-        background-color: #086375;
+        background-color: rgba(8, 99, 117, 0.95);
         padding: 10px;
         box-sizing: border-box;
     }
-
-    #videoWeapon, #videoInventory { /*size them to be able ho grow if needed*/
+/*size them to be able ho grow if needed*/
+    #videoWeapon, #videoInventory {
         width: 100%;
         height: auto;
         margin: 0;
     }
-    #contentOne, #contentTwo, #contentThree, #contentFour { /*set static position because they no longer need custom one,make them grow if needed*/
+	/*set static position because they no longer need custom one,make them grow if needed*/
+    #contentOne, #contentTwo, #contentThree, #contentFour {
         position: static;
         width: 100%;
         height: auto;
         background: none;
     }
-
-    .pointClass, #hint { /*hide body points, no need for them*/
+/*hide body points, no need for them*/
+    .pointClass, #hint {
         display: none;
     }
-
-    h1 { /*set smaller font size for title*/
+/*set smaller font size for title*/
+    h1 { 
 		font-size: 3rem; 
 	}
-    p, li { /*set smaller font size for most texts*/
+/*set smaller font size for most texts*/
+    p, li { 
 		font-size: 1.2rem;
 	}
-}
