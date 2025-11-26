@@ -7,17 +7,17 @@ header {
 	justify-content: flex-start;
 }
 .logo {
-	width: 6vw;
-	height: 13vh;
+	width: 11vh;
+	height: 11vh;
 }
 nav { 
 	display: flex;
 	flex: 1;
 	justify-content: space-evenly;
-	font-size: 2em;
+	font-size: 150%;
 }
 nav a { 
-	margin: 1vh;
+	margin: 0.2em;
 	color: #086375;
 	background: white;
 	
@@ -27,8 +27,8 @@ nav a {
 	text-decoration: none;
 	font-weight: bold;
 	border: 6px solid white;
-	border-radius: 3vh;
-	padding: 0vh 15vh;
+	border-radius: 15px;
+	padding: 0vh 13vh;
 	transition: all 0.4s ease;
 }
 nav a:hover { 
@@ -37,10 +37,16 @@ nav a:hover {
 	color: white;
 	transform: scale(1.15);
 }
+#stage {
+	position: relative;
+	margin: auto;
+	width: 30%;
+}
 .mainToji {
 	display: block;
 	margin: auto;
-	width: 65vh;
+	width: 100%;
+	height: auto;
 }
 h1 {
 	font-family: "Jolly Lodger", system-ui; 
@@ -51,64 +57,64 @@ h1 {
 	color: #cae9ff;
 }
 #firstCanvas {
-	width: 16vw;
-	height: 21vh;
+	width: 54%;
+	height: 23%;
 	position: absolute;
-	top: 18.7em;
-	left: 18.5em;
+	top: 12%;
+	left: -38%;
 }
 #contentOne {
 	background-color: #086375;
 	position: absolute;
-	top: 35vh;
-	left: 2vw;
-	width: 25vw;
-	height: 45vh;	
+	top: -8%;
+	left: -110%;
+	width: 90%;
+	height: 70%;	
 }
 #secondCanvas {
 	position: absolute;
-	top: 83vh;
-	left: 28vw;
-	width: 23vw;
-	height: 42vh;
+	top: 49%;
+	right: 46%;
+	width: 80%;
+	height: 47%;
 }
 #contentTwo {
 	background-color: #086375;
 	position: absolute;
-	width: 24vw;
-	height: 45vh;
-	top: 93vh;
-	left: 3.5vw;
+	width: 70%;
+	height: 60%;
+	top: 55%;
+	left: -105%;
 }
 #thirdCanvas {
 	position: absolute;
-	width: 31vw;
-	height: 35vh;
-	top: 34vh;
-	right: 17vw;
+	width: 104%;
+	height: 38%;
+	top: -7%;
+	right: -57%;
 }
 #contentThree {
 	background-color: #086375;
 	position: absolute;
 	width: 28vw;
 	height: 39vh;
-	top: 45vh;
-	right: 1vw;
+	top: 5%;
+	right: -110%;
 }
 #fourthCanvas {
 	position: absolute;
 	width: 39vw;
 	height: 42vh;
-	top: 75vh;
-	right: 10vw;
+	top: 41%;
+	left: 51%;
 }
 #contentFour {
 	background-color: #086375;
 	position: absolute;
-	width: 31vw;
-	height: 41vh;
-	top: 105vh;
-	right: 3vw;
+	width: 100%;
+	height: 40%;
+	top: 75%;
+	right: -105%;
 }
 .info {
 	visibility: hidden;
@@ -126,20 +132,20 @@ h1 {
 	transform: scale(2);
 }
 #point {
-	top: 25em;
-	left: 28.8em;
+	top: 30%;
+	left: 5%;
 }
 #point2 {
-	top: 96.2vh;
-	right: 51.4vw;
+	top: 63%;
+	left: 40%;
 }
 #point3 {
-	top: 63.2vh;
-	left: 50.5vw;
+	top: 25%;
+	left: 52%;
 }
 #point4 {
-	top: 74.5vh;
-	right: 48.5vw;
+	top: 40%;
+	right: 48%;
 }
 #videoInventory {
 	margin-left: 1.8vw;
@@ -168,7 +174,7 @@ p {
 	font-size: 4vh;
 }
 article {
-	margin-top: 15vh;
+	margin-top: 20vh;
 	display: flex;
 	justify-content: space-around;
 	border:	2vw solid white;
@@ -194,24 +200,57 @@ section h2 {
 	font-size: 7vh;
 	margin-bottom: 0px;
 }
+#pers {
+	flex: 1;
+	flex-direction: column;
+	display: flex;
+	height: 100%;
+}
 section p {
-	font-size: 4vh;
+	font-size: 150%;
 	text-align: justify;
 	padding: 0 0.5vw;
+	flex: 1;
+	font-size: 3.5vh;
+}
+#list {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 }
 #videoFight {
-	width: 33vw;
-	height: auto;
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	flex: 1;
 }
 li {
 	color: #cae9ff;
 	font-family: "Jolly Lodger", system-ui; 
   	font-weight: 400; 
   	font-style: normal;
-	font-size: 4vh;
+	flex: 1;
+	font-size: 3.5vh;
 }
 ul {
+	flex: 1;
 	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}
+article section:nth-of-type(3){
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	overflow: hidden;
+	border-right: none;
+}
+article section:nth-of-type(3) h2 {
+    flex: 0 0 auto;
+    margin: 0;
 }
 section li::before {
 	content: "🗡️";
