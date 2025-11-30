@@ -1,0 +1,157 @@
+body {
+    background-color: #086375; /*set background color for page*/
+}
+header { /*set header to start from the beginning of page and center the items*/
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.logo { /*set size of logos*/
+	width: 11vh;
+	height: 11vh;
+}
+nav { /*set navigation bar to take all space that's left, set equal amount of space between <a> and set font size for them*/
+	display: flex;
+	flex: 1;
+	justify-content: space-evenly;
+	font-size: 150%;
+}
+nav a { /*set color, background color, font, border, padding and transition for hover*/
+	margin: 0.2em;
+	color: #086375;
+	background: white;
+	
+	font-family: "Henny Penny", system-ui; 
+ 	font-weight: 400; 
+  	font-style: normal; 
+	text-decoration: none;
+	font-weight: bold;
+	border: 6px solid white;
+	border-radius: 15px;
+	padding: 0vh 13vh;
+	transition: all 0.4s ease;
+}
+nav a:hover { /*set on hover to get bigger, change color and background color*/
+	background-color: purple;
+	border-color: purple;
+	color: white;
+	transform: scale(1.15);
+}
+h1 {
+	color: #cae9ff;
+	text-align: center;
+	font-family: "Jolly Lodger", system-ui; 
+  	font-weight: 400; 
+  	font-style: normal;
+	font-size: 350%;
+}
+#beforeQuiz h2 {
+	color: #cae9ff;
+	font-family: "Jolly Lodger", system-ui; 
+  	font-weight: 400; 
+  	font-style: normal;
+	font-size: 200%;
+}
+#beforeQuiz a {
+	text-decoration: none;
+	color: white;
+}
+#beforeQuiz a:hover {
+	color: purple;
+}
+#startButton {
+	text-align: center;
+	margin: 0 40%;
+	color: #086375;
+	background-color: white;
+	padding: 2% 6%;
+	border-radius: 15px;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+#startButton:hover {
+	transform: scale(1.15);
+	box-shadow: 10px 10px 5px #cae9ff;
+}
+#beforeQuiz {
+	display: none;
+}
+#beforeQuiz p {
+	color: #cae9ff;
+	font-family: "Jolly Lodger", system-ui; 
+  	font-weight: 400; 
+  	font-style: normal;
+	font-size: 3em;
+	text-align: center;
+	margin-top: 8%;
+}
+#question {
+	margin: 2% 5%;
+	text-align: center;
+	overflow-wrap: break-word;
+	padding: 1% 2%;
+	color: #cae9ff;
+	font-family: "Jolly Lodger", system-ui; 
+  	font-weight: 400; 
+  	font-style: normal;
+	font-size: 250%;
+	border: 5px solid #cae9ff;
+	border-radius: 15px;
+}
+#answers {
+	height: 40vh;
+	margin: 0 7%;
+	display: grid;
+	justify-items: center;
+	grid-template-rows: 2fr 1fr 2fr;
+	grid-template-columns: 2.5fr 1fr 2.5fr;
+	grid-template-areas:
+		"q1 . q2"
+		". image ."
+		"q3 . q4"
+}
+#answers p {
+	color: #086375;
+	background-color: white;
+	font-family: "Jolly Lodger", system-ui; 
+  	font-weight: 400; 
+  	font-style: normal;
+	border-radius: 15px;
+	padding: 10% 30%;
+	overflow-wrap: break-word;
+	transition: all 0.3s ease;
+}
+#answers p:hover {
+	color: white;
+	background-color: purple;
+	cursor: pointer;
+	transform: scale(1.15);
+}
+.q1 {
+	grid-area: q1;
+}
+.q2 {
+	grid-area: q2;
+}
+.q3 {
+	grid-area: q3;
+}
+.q4 {
+	grid-area: q4;
+}
+.image {
+	grid-area: image;
+	width: 80%;
+	height: auto;
+}
+fieldset {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+}
+li {
+	list-style-type: none;
+}
+footer {
+	display: none;
+}
