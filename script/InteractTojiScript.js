@@ -46,7 +46,7 @@ function quizStart(){
 	game();
 }
 function game(){
-	tojiReaction.src = '../assets/tojiThinking.webp';
+	tojiReaction.src = '../assets/tojiThinking.jpg';
 	const data = quizData[currentIndex];
 	questionContainer.innerText = data.question;
 	options.forEach((q, index) => {

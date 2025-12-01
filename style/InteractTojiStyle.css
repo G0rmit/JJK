@@ -145,7 +145,7 @@ h1 {
 }
 #image {
 	grid-area: image;
-	width: 80%;
+	width: 60%;
 	height: auto;
 }
 fieldset {
