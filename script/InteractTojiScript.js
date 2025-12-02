@@ -1,4 +1,5 @@
 "use strict"
+/*getting all elements from html*/
 const beforeQuiz = document.getElementById('beforeQuiz');
 const quiz = document.getElementById('quiz');
 const start = document.getElementById('startButton')
@@ -8,12 +9,14 @@ let tojiReaction = document.getElementById('image');
 let count = 0;
 const afterQuiz = document.getElementById('afterQuiz');
 let score = document.getElementById('score');
+/*creating the list of answer buttons*/
 const options = [
 	document.getElementById('q1'),
 	document.getElementById('q2'),
 	document.getElementById('q3'),
 	document.getElementById('q4')
 ];
+/*creating an array of objects(questions), answers and rigt indexes to switch them between rounds*/
 const quizData = [
 	{
 		question: "1/5: Which prominent sorcerer clan was Toji Fushiguro originally a member of before he left?",
@@ -41,51 +44,62 @@ const quizData = [
 		correctIndex: 0
 	}
 ]
+/*add event to start quiz if the button Start is pressed*/
 start.addEventListener('click', quizStart);
+/*function to change screens and start the game*/
 function quizStart(){
 	beforeQuiz.style.display = 'none';
 	quiz.style.display = 'block';
 	game();
 }
+/*function to get data from array for current question(index). Switching qestion and answer options, cheking if the answer is right when the answer box is clicked, and returning answer buttons normal clicking functional*/
 function game(){
 	tojiReaction.src = '../assets/tojiThinking.jpg';
-	const data = quizData[currentIndex];
+	const data = quizData[currentIndex]; /*getting data for current question round*/
 	questionContainer.innerText = data.question;
+	/*giving answer option for each answer button*/
 	options.forEach((q, index) => {
 		q.innerText = data.answers[index];
 		q.onclick = () => checkAnswer(index);
 		q.style.pointerEvents = 'auto';
 	})
 }
+/*function to check if the answer is right, count the score, decide if the game is finished, freeze buttons while checking answer, switching toji picture depending on answer*/
 function checkAnswer(selectedIndex){
 	options.forEach(q => {
-        q.style.pointerEvents = 'none';
+        q.style.pointerEvents = 'none'; /*freeze the button, preventing user from multiclicking it*/
     });
 	const correctIndex = quizData[currentIndex].correctIndex;
 	const selectedAnswer = options[selectedIndex];
+	/*if the answers was chosen correctly*/
 	if (selectedIndex === correctIndex){
 		count++;
 		tojiReaction.src = "../assets/happyToji.jpg";
 		selectedAnswer.style.color = 'white';
 		selectedAnswer.style.backgroundColor = 'green';
 	}
+	/*if the answer was incorrect*/
 	else{
 		selectedAnswer.style.color = 'white';
 		selectedAnswer.style.backgroundColor = 'red';
 		tojiReaction.src = "../assets/angryToji.jpg";
 	}
+	/*function to make a 1.5s delay for user to see if his answer is right(green) or wrong(red) before deciding if the game is over or no*/
 	setTimeout(() => {
+		/*reset answer buttons colors*/
 		selectedAnswer.style.color = '';
 		selectedAnswer.style.backgroundColor = '';
 		currentIndex++;
+		/*check if it's the last round*/
 		if (currentIndex < quizData.length){
 			game();
 		}
 		else{
 			afterQuiz.style.display = 'block';
 			quiz.style.display = 'none';
+			/*decide on the result message after quiz, based on the user's count(score)*/
 			if (count >= 3){
-				score.innerText = 'You scored ' + count + '/5, which means you passes the test! Good job!';
+				score.innerText = 'You scored ' + count + '/5, which means you passed the test! Good job!';
 			}
 			else{
 				score.innerText = "You scored " + count + "/5, which means you didn't pass the test. Try one more time!";
@@ -93,7 +107,7 @@ function checkAnswer(selectedIndex){
 		}
 	}, 1500);
 }
-
+/*function to make form work and thank the user for a review*/
 let answerButton = document.getElementById("button");
 answerButton.addEventListener("click", validateRating);
 function validateRating(){

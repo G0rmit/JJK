@@ -37,7 +37,8 @@ nav a:hover { /*set on hover to get bigger, change color and background color*/
 	color: white;
 	transform: scale(1.15);
 }
-h1 {
+/*Style the title of the page, color, font, size*/
+h1 { 
 	color: #cae9ff;
 	text-align: center;
 	font-family: "Jolly Lodger", system-ui; 
@@ -45,6 +46,7 @@ h1 {
   	font-style: normal;
 	font-size: 350%;
 }
+/*style the hint for revision, color, font, size*/
 #beforeQuiz h2 {
 	color: #cae9ff;
 	font-family: "Jolly Lodger", system-ui; 
@@ -52,13 +54,16 @@ h1 {
   	font-style: normal;
 	font-size: 200%;
 }
+/*remove underline from link and make it white*/
 #beforeQuiz a {
 	text-decoration: none;
 	color: white;
 }
+/*change link's color on hover*/
 #beforeQuiz a:hover {
 	color: purple;
 }
+/*styling of the button that starts quiz*/
 #startButton {
 	text-align: center;
 	margin: 0 40%;
@@ -69,10 +74,12 @@ h1 {
 	transition: all 0.3s ease;
 	cursor: pointer;
 }
+/*make button increase in size and add shadow on hover*/
 #startButton:hover {
 	transform: scale(1.15);
 	box-shadow: 10px 10px 5px #cae9ff;
 }
+/*switches screens during the quizz time, from the screen with start to qiz to result screen*/
 #beforeQuiz {
 	display: block;
 }
@@ -83,6 +90,7 @@ h1 {
 	display: none;
 	text-align: center;
 }
+/*styling Ready??? text*/
 #beforeQuiz p {
 	color: #cae9ff;
 	font-family: "Jolly Lodger", system-ui; 
@@ -92,6 +100,7 @@ h1 {
 	text-align: center;
 	margin-top: 8%;
 }
+/*styling question area*/
 #question {
 	margin: 4% 5%;
 	text-align: center;
@@ -105,6 +114,7 @@ h1 {
 	border: 5px solid #cae9ff;
 	border-radius: 15px;
 }
+/*styling and giving grid to answer options with image in middle*/
 #answers {
 	margin: 0 auto;
 	width: 85%;
@@ -118,6 +128,7 @@ h1 {
 		". image ."
 		"q3 . q4";
 }
+/*styling answer text and font*/
 #answers p {
 	color: #086375;
 	background-color: white;
@@ -130,12 +141,14 @@ h1 {
 	transition: all 0.3s ease;
 	font-size: 200%;
 }
+/*make answer texts change color and grow on hover*/
 #answers p:hover {
 	color: white;
 	background-color: purple;
 	cursor: pointer;
 	transform: scale(1.15);
 }
+/*link answer options to grd area*/
 #q1 {
 	grid-area: q1;
 }
@@ -148,11 +161,13 @@ h1 {
 #q4 {
 	grid-area: q4;
 }
+/*styling the image in the middle*/
 #image {
 	grid-area: image;
 	width: 70%;
 	height: auto;
 }
+/*styling the text. depending on score*/
 #afterQuiz h2 {
 	color: #cae9ff;
 	font-family: "Jolly Lodger", system-ui; 
@@ -160,6 +175,7 @@ h1 {
   	font-style: normal;
 	font-size: 270%;
 }
+/*styling the link to retake the test*/
 #afterQuiz a {
 	display: inline-block;
 	padding: 1.5% 8%;
@@ -173,26 +189,34 @@ h1 {
 	font-size: 200%;
 	transition: all 0.3s ease;
 }
+/*adding growth and shadow to the buttn for retaking test*/
 #afterQuiz a:hover {
 	transform: scale(1.15);
 	box-shadow: 10px 10px 5px #cae9ff; 
 }
+/*centering the form*/
 form {
 	display: block;
 	margin-top: 5%;
 	margin-left: 40%;
 }
+/*styling the form's area*/
 fieldset {
 	width: 30%;
 	display: flex;
 	flex-direction: column;
 	background-color: #cae9ff;
 }
+/*styling options for review*/
 li {
 	text-align: start;
 	padding: 0;
 	list-style-type: none;
+	color: #cae9ff;
+	font-family: "Jolly Lodger", system-ui; 
+  	font-weight: 400;
 }
+/*styling footer section of the page*/
 footer {
 	margin-top: 10vh;
 	display: flex;
@@ -210,10 +234,4 @@ footer a {
 /*make sources change color on hover*/
 footer a:hover {
 	color: purple;
-}
-footer li {
-	color: #cae9ff;
-	text-align: center;
-	font-family: "Jolly Lodger", system-ui; 
-  	font-weight: 400;  
 }

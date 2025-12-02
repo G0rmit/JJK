@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Toji Test</title>
-		<link rel="stylesheet" href="../style/InteractTojiStyle.css">
+		<link rel="stylesheet" href="../style/InteractTojiStyle.css"> <!--link css-->
 		<!--get all needed fonts-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,12 +12,12 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Jolly+Lodger&display=swap" rel="stylesheet">
-		<script src="../script/InteractTojiScript.js" defer></script>
+		<script src="../script/InteractTojiScript.js" defer></script><!--link js-->
 	</head>
 	<body>
 		<header>
 			<img class="logo" src="../assets/Logo.png" alt="logo">
-			<nav>
+			<nav> <!--nav bar with 3 pages-->
 				<a href="../JJKProject.html">Home</a>
 				<a href="../pages/Toji.html">Toji Fushiguro</a>
 				<a href="../pages/Gojo.html">Gojo Satoru</a>
@@ -25,14 +25,14 @@
 		</header>
 		<main>
 			<h1>TEST ON TOJI FUSHIGURO</h1>
-			<section id="beforeQuiz">
+			<section id="beforeQuiz"><!--screen with Start button, the "Before Quiz" screen-->
 				<h2>Before starting the test, the revision is available at <a href="https://jujutsu-kaisen.fandom.com/wiki/Toji_Fushiguro">Toji Wiki</a> or at Toji page from our project.</h2>
 				<p>Ready???</p>
-				<h3 id="startButton">Start!!!</h3>
+				<h3 id="startButton">Start!!!</h3><!--The button to start the test-->
 			</section>
-			<section id="quiz">
+			<section id="quiz"><!--quiz screen, the one with questions ans answer options-->
 				<p id="question">Question</p>
-				<section id="answers">
+				<section id="answers"><!--4 aswer buttons, displayed in grid, with a picture that reacts to either right or wrong answer-->
 					<p id="q1">Option 1</p>
 					<p id="q2">Option 2</p>
 					<img id="image" src="../assets/tojiThinking.jpg" alt="thinking Toji">
@@ -40,11 +40,11 @@
 					<p id="q4">Option 4</p>
 				</section>
 			</section>
-			<section id="afterQuiz">
+			<section id="afterQuiz"><!--Screen with the result of quiz, the score, button to retake test and review form-->
 				<h1>Congratulation, you have completed this test on Toji Fushiguro!</h1>
-				<h2 id="score">Test message</h2>
-				<a href="TojiInteractive.html">Retake the test</a>
-				<form>
+				<h2 id="score">Test message</h2><!--Message that changes depending on the user's score-->
+				<a href="TojiInteractive.html">Retake the test</a><!--Button to retake test, go to Before Quiz screen-->
+				<form><!--form to evaluate the website, along with sharing the name and email-->
 				<fieldset>
 					<label for="name">Your name: </label>
 					<input type="text" id="name" name="name" placeholder="John Smith" required>
@@ -78,7 +78,7 @@
 			</form>
 			</section>
 		</main>
-		<footer>
+		<footer><!--sources and author's name part-->
 			<ul >
 			<li class="source">Page made by Pavlo Kvartiuk</li>
 			<li class="source">
