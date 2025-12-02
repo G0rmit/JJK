@@ -6,6 +6,8 @@ let currentIndex = 0;
 const questionContainer = document.getElementById('question');
 let tojiReaction = document.getElementById('image');
 let count = 0;
+const afterQuiz = document.getElementById('afterQuiz');
+let score = document.getElementById('score');
 const options = [
 	document.getElementById('q1'),
 	document.getElementById('q2'),
@@ -80,11 +82,13 @@ function checkAnswer(selectedIndex){
 			game();
 		}
 		else{
+			afterQuiz.style.display = 'block';
+			quiz.style.display = 'none';
 			if (count >= 3){
-				alert("Test finished. You passed with a score: " + count + "/5.");
+				score.innerText = 'You scored ' + count + '/5, which means you passes the test! Good job!';
 			}
 			else{
-				alert("Test finished. You didn't pass with your score: " + count + "/5. You need at least 3/5.");
+				score.innerText = "You scored " + count + "/5, which means you didn't pass the test. Try one more time!";
 			}
 		}
 	}, 1500);
