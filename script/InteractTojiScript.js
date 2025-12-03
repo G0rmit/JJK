@@ -16,7 +16,7 @@ const options = [
 	document.getElementById('q3'),
 	document.getElementById('q4')
 ];
-/*creating an array of objects(questions), answers and rigt indexes to switch them between rounds*/
+/*creating an array of objects(questions), answers and right indexes to switch them between rounds*/
 const quizData = [
 	{
 		question: "1/5: Which prominent sorcerer clan was Toji Fushiguro originally a member of before he left?",
