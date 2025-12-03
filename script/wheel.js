@@ -5,20 +5,20 @@ const characters = [
         name: "Gojo Satoru", 
         image: "../assets/assets/gojo.webp", 
         strength: 85, 
-        speed: 95, 
+        speed: 80, 
         defense: 90, 
         cursedEnergy: 100, 
-        intelligence: 95, 
+        intelligence: 85, 
         type: "jujutsu" 
     },
     { 
         id: 2, 
         name: "Toji Fushiguro", 
         image: "../assets/assets/toji.webp", 
-        strength: 90, 
-        speed: 92, 
-        defense: 85, 
-        weapons: 95, 
+        strength: 75, 
+        speed: 80, 
+        defense: 70, 
+        weapons: 80, 
         intelligence: 80, 
         type: "physical" 
     },
@@ -27,8 +27,8 @@ const characters = [
         name: "Goku", 
         image: "../assets/assets/goku.png", 
         strength: 100, 
-        speed: 95, 
-        defense: 90, 
+        speed: 100, 
+        defense: 100, 
         ki: 100, 
         intelligence: 60, 
         type: "saiyan" 
@@ -39,7 +39,7 @@ const characters = [
         image: "../assets/assets/sukuna.jpg", 
         strength: 95, 
         speed: 90, 
-        defense: 85, 
+        defense: 80, 
         cursedEnergy: 100, 
         intelligence: 90, 
         type: "jujutsu" 
@@ -48,8 +48,8 @@ const characters = [
         id: 5, 
         name: "Naruto", 
         image: "../assets/assets/naruto.jpg", 
-        strength: 90, 
-        speed: 88, 
+        strength: 80, 
+        speed: 90, 
         defense: 85, 
         chakra: 95, 
         intelligence: 75, 
@@ -59,10 +59,10 @@ const characters = [
         id: 6, 
         name: "Luffy", 
         image: "../assets/assets/luffy.jpeg", 
-        strength: 92, 
+        strength: 75, 
         speed: 85, 
         defense: 90, 
-        haki: 95, 
+        haki: 85, 
         intelligence: 50, 
         type: "pirate" 
     },
@@ -81,11 +81,11 @@ const characters = [
         id: 8, 
         name: "Rimuru", 
         image: "../assets/assets/rimuru.webp", 
-        strength: 85, 
-        speed: 90, 
-        defense: 95, 
+        strength: 100, 
+        speed: 100, 
+        defense: 100, 
         magic: 100, 
-        intelligence: 95, 
+        intelligence: 100, 
         type: "slime" 
     }
 ];
@@ -120,7 +120,6 @@ function initializeWheel() {
         const angle = index * segmentAngle;
         const segment = document.createElement('div');
         segment.className = 'wheel-character';
-        // Try different placement - simpler approach
         segment.style.transform = `rotate(${angle}deg) translate(130px) rotate(-${angle}deg)`;
         segment.innerHTML = `
             <img src="${character.image}" alt="${character.name}">
@@ -204,9 +203,10 @@ function determineWinner() {
                          selectedOpponent.chakra || selectedOpponent.haki || 
                          selectedOpponent.reiatsu || selectedOpponent.magic || 0);
     
-    // Add some randomness to make it interesting
-    const playerFinal = playerPower + Math.floor(Math.random() * 30);
-    const opponentFinal = opponentPower + Math.floor(Math.random() * 30);
+   
+	const playerFinal = playerPower;
+	const opponentFinal = opponentPower;
+
     
     // Determine winner
     let winner, loser;
