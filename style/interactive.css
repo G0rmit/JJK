@@ -1,0 +1,16 @@
+/* Vriten */
+body {
+	font-family: Arial, sans-serif;
+	font-style: italic;
+}
+ul.form-grid {
+  list-style: none; 
+  padding:0;
+}
+li {
+	margin: 1rem;
+}
+h3 {
+	diplay:flex;
+	text-align: center;
+}

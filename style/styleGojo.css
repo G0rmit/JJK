@@ -51,36 +51,6 @@ h1 {
     margin:auto;
     width: 65vh;
 }
-}
-.pointClass {
-    background-color: #7fcaff;
-    position: absolute;
-    width: 0.7vw;
-    height: 1.6vh;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-}
-.pointClass:hover {
-    transform: scale(2);
-}
-#point {
-    top: 63vh;
-    left: 43.83vw;
-}
-#point2 {
-    top: 96.2vh;
-    right: 51.4vw;
-}
-#point3 {
-    top: 57.1vh;
-    left: 44.85vw;
-}
-#point4 {
-    top: 74.5vh;
-    right: 48.5vw;
-}
 #firstCanvas {
     width: 25.8vw;
     height: 23vh;
@@ -159,7 +129,7 @@ p {
     font-size: 4vh;
   
 }
-article {
+.article-wrapper {
     margin-top: 15vh;
     display: flex;
     justify-content: space-around;
@@ -167,11 +137,11 @@ article {
     height: 55vh;
 }
 
-article section:last-child {
+.article-wrapper section:last-child {
     border-right: none;
 }
 
-article section {
+.article-wrapper section {
     flex: 1;
     background-color: #086375;
     border-right: 2vw solid white;
@@ -179,7 +149,7 @@ article section {
     box-sizing: border-box;
 }
 
-section h2 {
+.article-wrapper h2 {
     font-family: "Jolly Lodger", system-ui; 
     font-weight: 400; 
     font-style: normal;
@@ -191,20 +161,20 @@ section h2 {
     padding: 1vh;
 }
 
-section p, section li {
+.article-wrapper p, section li {
     font-size: 4vh;
     color: #cae9ff;
     font-family: "Jolly Lodger", system-ui;
 }
 
-section ul {
+.article-wrapper ul {
 	flex: 1;
     list-style-type: none;
     padding: 0;
     margin: 2vh 0;
 }
 
-section li::before {
+.article-wrapper li::before {
     content: "✵";
     margin-right: 2vw;
 }

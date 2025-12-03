@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Fight Simulator: Gojo vs Toji</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CHANGE THIS TO YOUR ACTUAL CSS FILE NAME -->
+    <link rel="stylesheet" href="../style/wheelstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+    <script src="../script/wheel.js" defer></script>
+</head>
+<body>
+	<main class="container">
+	<header class="site-header">
+		<img class="logo" src="../assets/Logo.png" alt="logo" width="75">
+		<nav>
+			<a href="../JJKProject.html">Home</a>
+			<a href="../pages/Toji.html">Toji Fushiguro</a>
+			<a href="../pages/Gojo.html">Gojo Satoru</a>
+		</nav>
+	</header>
+        <h1 class="subtitle">Choose Gojo or Toji, then spin the wheel to select a random opponent. Press  FIGHT!</h1>
+        <section class="main-content">
+            <!-- LEFT PANEL: GOJO AND TOJI SELECTION -->
+            <article class="panel">
+                <h2 class="panel-title"><i class="fas fa-user" aria-hidden="true"></i> Choose Your Fighter</h2>
+                <section class="character-selection">
+                    <!-- GOJO CHARACTER OPTION -->
+                    <article class="character-option" data-id="1" role="button" tabindex="0">
+                        <!-- REPLACE THIS WITH YOUR GOJO IMAGE -->
+                        <img src="../assets/assets/gojo.webp" class="character-image" alt="Gojo Satoru">
+                        <h3 class="character-name">Gojo Satoru</h3>
+                        <p>The strongest Jujutsu sorcerer with Limitless and Six Eyes techniques.</p>
+                        <ul class="character-stats">
+                            <li class="stat">
+                                Cursed Energy
+                                <strong class="stat-value">∞</strong>
+                            </li>
+                            <li class="stat">
+                                Speed
+                                <strong class="stat-value">95</strong>
+                            </li>
+                            <li class="stat">
+                                Defense
+                                <strong class="stat-value">90</strong>
+                            </li>
+                        </ul>
+                    </article>
+                    
+                    <!-- TOJI CHARACTER OPTION -->
+                    <article class="character-option" data-id="2" role="button" tabindex="0">
+                        <!-- REPLACE THIS WITH YOUR TOJI IMAGE -->
+                        <img src="../assets/assets/toji.webp" class="character-image" alt="Toji Fushiguro">
+                        <h3 class="character-name">Toji Fushiguro</h3>
+                        <p>The Sorcerer Killer with heavenly restriction and superhuman physical abilities.</p>
+                        <ul class="character-stats">
+                            <li class="stat">
+                                Strength
+                                <strong class="stat-value">90</strong>
+                            </li>
+                            <li class="stat">
+                                Speed
+                                <strong class="stat-value">92</strong>
+                            </li>
+                            <li class="stat">
+                                Weapons
+                                <strong class="stat-value">95</strong>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+            </article>
+            
+            <!-- RIGHT PANEL: ANIME CHARACTER WHEEL -->
+            <article class="panel">
+                <h2 class="panel-title"><i class="fas fa-dharmachakra" aria-hidden="true"></i> Random opponent</h2>
+                <section class="wheel-container">
+                    <figure class="wheel">
+                        <div class="wheel-circle" id="wheelCircle"></div>
+                        <mark class="wheel-center">
+                            <i class="fas fa-bolt" aria-hidden="true"></i>
+                        </mark>
+                        <i class="fas fa-caret-down fa-2x wheel-pointer" aria-hidden="true"></i>
+                    </figure>
+                    <button class="fight-button" id="fightButton" disabled>
+                        <i class="fas fa-fist-raised" aria-hidden="true"></i> FIGHT!
+                    </button>
+                </section>
+            </article>
+        </section>
+        
+        <!-- BATTLE RESULTS SECTION -->
+        <section class="result-container" id="resultContainer" hidden>
+            <h2 class="result-title">Battle Result</h2>
+            <section class="versus" id="versusArea"></section>
+            <p class="winner-text" id="winnerText"></p>
+        </section>
+    </main>
+	<ul class="footer">
+		<li>
+		<ul >
+			<li class="source">Page made by Vriten Anthonipillai</li>
+			<li class="source">
+				Sources: <a href="https://dragonball.fandom.com/wiki/Goku">(1), </a>
+						 <a href="https://onepiece.fandom.com/wiki/Monkey_D._Luffy">(2)</a>
+						 <a href="https://tensura.fandom.com/wiki/Rimuru_Tempest">(3), </a>
+						 <a href="https://jujutsu-kaisen.fandom.com/wiki/Sukuna">(4), </a>
+						 <a href="https://bleach.fandom.com/wiki/Ichigo_Kurosaki">(5), </a>
+						<a href="https://naruto.fandom.com/wiki/Narutopedia">(6), </a>
+			</li>
+		</ul>
+		</li>
+		<ul>
+			<img  class="logo" src="../assets/Logo.png" alt="logo" width="75">
+		</ul>
+	</ul>
+</body>
+</html>
